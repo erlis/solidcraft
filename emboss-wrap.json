@@ -1,0 +1,12 @@
+{"commands": [
+  {"command": "solid.cylinder", "params": {"radius": 20, "height": 30, "body_name": "Tube"}},
+  {"command": "solid.cylinder", "params": {"radius": 16, "height": 30, "operation": "cut", "targets": ["Tube"]}},
+  {"command": "sketch.create", "params": {"plane": {"origin": [0, 20, 0], "x_dir": [-1, 0, 0], "y_dir": [0, 0, 1]}, "name": "Badge"}},
+  {"command": "sketch.text", "params": {"text": "SolidCraft", "at": [-14, 18], "height": 5}},
+  {"command": "sketch.circle.center", "params": {"center": [-11, 7], "radius": 3}},
+  {"command": "sketch.line", "params": {"points": [[-3, 4], [9, 4], [3, 11]], "closed": true}},
+  {"command": "sketch.circle.center", "params": {"center": [16, 7], "radius": 3}},
+  {"command": "sketch.finish", "params": {}},
+  {"command": "solid.emboss", "params": {"sketch": "Badge", "face": [0, 20, 15], "depth": 1}},
+  {"command": "browser.visibility", "params": {"visible": false, "folder": "sketches"}}
+]}
